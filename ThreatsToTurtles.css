@@ -1,0 +1,544 @@
+/* ------------------------------------------------Global styles---------------------------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  background-image: url('Images/cover-image\ .png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+  
+  /* -----------------------------------------------Header styles--------------------------------------*/
+  header {
+    background-color: #ffffff;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust the margin as needed */
+  }
+  
+  .header-logo .logo-img {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  nav ul li {
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #00590f;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative; /* Add relative positioning */
+  }
+  
+  nav ul li a:hover {
+    /* Add animation to the underline */
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    background-color: #00590f;
+    animation-name: underline;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes underline {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  /* Dropdown menu styles */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown .dropbtn {
+    background-color: inherit;
+    color: #00590f;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #35a333;
+    min-width: 160px;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-content li {
+    padding: 5px 0;
+  }
+  
+  .dropdown-content li a {
+    color: #ffffff;
+    font-size: 16px;
+    display: block;
+    text-align: center; 
+  }
+  
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+  /* -------------------------------------------------Main Heading section------------------------------- */
+
+  .habitat-destruction-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .main-heading {
+    text-align: center;
+  }
+  
+  .sub-heading {
+    text-align: center;
+  }
+/* -------------------------------------------------Styling for Habitat Destruction section------------------------------- */
+
+#habitat-destruction-section {
+  display: flex;
+  justify-content: center;
+}
+
+#habitat-destruction-section .section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #20671a;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+#habitat-destruction-section .left-section {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#habitat-destruction-section .right-section {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px; /* Increase the margin-top value to move the image downwards */
+}
+
+#habitat-destruction-section .section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Decrease the margin-top value to reduce the spacing */
+}
+
+#habitat-destruction-section .section-title.underline {
+  text-decoration: underline;
+}
+
+#habitat-destruction-section .paragraph-container {
+  margin-top: 5px;
+}
+
+#habitat-destruction-section .paragraph-heading {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#habitat-destruction-section .section-description {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#habitat-destruction-section .new-image-class {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 35px; /* Increase the margin-bottom value to move the image downwards */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #28a745; /* Add a border property with a green color */
+}
+
+#habitat-destruction-section .button-container {
+  margin-top: 10px; /* Decrease the margin-top value to move the button upwards */
+  text-align: center;
+}
+
+#habitat-destruction-section .cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#habitat-destruction-section .cta-btn:hover {
+  background-color: #a0d3a7;
+}
+
+
+/* --------------------------------------------Styling for Pollution section----------------------------------------------- */
+
+#pollution-section .section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Decrease the margin-top value to reduce the spacing */
+  text-decoration: underline; /* Add underline text decoration */
+}
+
+#pollution-section .section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #20671a;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+#pollution-section .left-section {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#pollution-section .right-section {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px; /* Increase the margin-top value to move the image downwards */
+}
+
+#pollution-section .section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Decrease the margin-top value to reduce the spacing */
+}
+
+#pollution-section .paragraph-container {
+  margin-top: 5px;
+}
+
+#pollution-section .paragraph-heading {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#pollution-section .section-description {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#pollution-section .new-image-class {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 35px; /* Increase the margin-bottom value to move the image downwards */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #28a745; /* Add a border property with a green color */
+}
+
+#pollution-section .button-container {
+  margin-top: 10px; /* Decrease the margin-top value to move the button upwards */
+  text-align: center;
+}
+
+#pollution-section .cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#pollution-section .cta-btn:hover {
+  background-color: #a0d3a7;
+}
+
+
+/*----------------------------------------------------- Styling for Illegal Trade section -------------------------------------------*/
+
+#illegal-trade-section .section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Decrease the margin-top value to reduce the spacing */
+  text-decoration: underline; /* Add underline text decoration */
+}
+
+#illegal-trade-section .section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #20671a;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+#illegal-trade-section .left-section {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#illegal-trade-section .right-section {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px; /* Increase the margin-top value to move the image downwards */
+}
+
+#illegal-trade-section .section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Decrease the margin-top value to reduce the spacing */
+}
+
+#illegal-trade-section .paragraph-container {
+  margin-top: 5px;
+}
+
+#illegal-trade-section .paragraph-heading {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#illegal-trade-section .section-description {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#illegal-trade-section .new-image-class {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 35px; /* Increase the margin-bottom value to move the image downwards */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #28a745; /* Add a border property with a green color */
+}
+
+#illegal-trade-section .button-container {
+  margin-top: 10px; /* Decrease the margin-top value to move the button upwards */
+  text-align: center;
+}
+
+#illegal-trade-section .cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#illegal-trade-section .cta-btn:hover {
+  background-color: #a0d3a7;
+}
+
+/* ----------------------------------Link to Kosgoda and Bentota Section -----------------------------------*/
+
+.heading {
+  text-align: center;
+}
+
+.bottom-section {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container a {
+  margin: 30px; /* Increase the margin for more spacing */
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container img {
+  width: 400px; /* Increase the width of the images */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  transition: transform 0.3s ease; /* Add a smooth transition on hover */
+}
+
+.image-container img:hover {
+  opacity: 0.8;
+  transform: scale(1.1); /* Apply a slight scale transformation on hover */
+}
+
+.caption {
+  margin-top: 20px; /* Adjust the spacing between the image and the caption */
+  font-size: 20px; /* Adjust the font size of the caption */
+  font-weight: bold; /* Add bold font weight to the caption */
+  text-align: center; /* Center the caption text */
+  color: #333; /* Change the color of the caption text */
+}
+
+  /* ----------------------------------------------------------Footer styles -------------------------------------------------------*/
+footer {
+  background-color: #309849; 
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .about-us,
+footer .quick-links,
+footer .contact-us {
+  flex-basis: calc(100% / 3);
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #4fcb62;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer .copyright {
+  font-size: 12px;
+  margin-top: 20px; 
+  position: relative;
+}
+
+footer .copyright::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}

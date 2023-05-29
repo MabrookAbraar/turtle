@@ -1,0 +1,313 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  background-image: url('Images/cover\ image\ 3.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+  
+  /*-------------------------------------------------------- Header section------------------------------------------------- */
+  header {
+    background-color: #ffffff;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust the margin as needed */
+  }
+  
+  .header-logo .logo-img {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  nav ul li {
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #00590f;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative; /* Add relative positioning */
+  }
+  
+  nav ul li a:hover {
+    /* Add animation to the underline */
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    background-color: #00590f;
+    animation-name: underline;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes underline {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  /* Dropdown menu styles */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown .dropbtn {
+    background-color: inherit;
+    color: #00590f;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #35a333;
+    min-width: 160px;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-content li {
+    padding: 5px 0;
+  }
+  
+  .dropdown-content li a {
+    color: #ffffff;
+    font-size: 16px;
+    display: block;
+    text-align: center; /* Center the wordings */
+  }
+  
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* ----------------------------------Content section------------------------------------------- */
+
+  .turtle-hatchery {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: #e7e7e7;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px #00000080;
+  }
+  
+  .subheading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e7e7e7;
+    text-align: center;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .main-content {
+    margin-top: 10px; /* Adjust the margin-top value as per your preference */
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 5px; /* Adjust the margin-bottom value as per your preference */
+    text-align: center;
+    color: #555;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .description::first-letter {
+    font-size: inherit;
+    font-weight: normal;
+  }
+  
+  
+  
+  /* ----------------------------------------------------Tips section ----------------------------------------------*/
+  .tips-section {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px; /* Add margin-bottom to increase spacing */
+  }
+  
+  .tips-section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin-top: 0; /* Updated to remove the default margin */
+  }
+  
+  .tips-section h4 {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-top: 0; /* Updated to remove the default margin */
+  }
+
+.tips-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tips-section li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.tips-section li:before {
+  content: "\2022"; /* Bullet point */
+  color: #666;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+  /* -----------------------------------------------------Maps section--------------------------------------------- */
+
+  .location {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; /* Increase the margin-top value to increase spacing */
+    padding-bottom: 80px; /* Add padding-bottom to create space below the map */
+  }
+  
+  .location iframe {
+    width: 90%;
+    height: 450px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+/* ----------------------------------------------------------Footer styles -------------------------------------------------------*/
+footer {
+  background-color: #309849; 
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .about-us,
+footer .quick-links,
+footer .contact-us {
+  flex-basis: calc(100% / 3);
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #4fcb62;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer .copyright {
+  font-size: 12px;
+  margin-top: 20px; 
+  position: relative;
+}
+
+footer .copyright::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}

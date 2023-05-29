@@ -1,0 +1,482 @@
+/* ----------------------------------------Global styles------------------------------------------------ */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  background-image: url('Images/cover-image\ .png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+
+/* ----------------------------------------------------------Header section------------------------------------------------------ */
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.header-logo .logo-img {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #00590f;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative; /* Add relative positioning */
+}
+
+nav ul li a:hover {
+  /* Add animation to the underline */
+  text-decoration: none;
+}
+
+nav ul li a:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  background-color: #00590f;
+  animation-name: underline;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes underline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Dropdown menu styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropbtn {
+  background-color: inherit;
+  color: #00590f;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #35a333;
+  min-width: 160px;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content li {
+  padding: 5px 0;
+}
+
+.dropdown-content li a {
+  color: #ffffff;
+  font-size: 16px;
+  display: block;
+  text-align: center; 
+}
+
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+/* -----------------------------------------------------------Content section--------------------------------------------------- */
+.heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subheading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.heading {
+  font-size: 40px;
+}
+
+.subheading {
+  font-size: 28px;
+}
+
+.section-container {
+  border: 2px solid #20671a;
+  background-color: #FFF;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 16px;
+  text-align: center; 
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #28a745;
+  color: #FFF;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #A0D3A7;
+}
+
+
+/*------------------------------------------Hikkaduwa Turtle Hatchery and Other Turtle Hatchery Section ------------------------------------------*/
+
+.section-about {
+  background-color: #f2f2f2;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px; /* Add margin-bottom to create a gap between sections */
+}
+
+.item-1 {
+  flex-basis: 50%;
+}
+
+.image-1 {
+  flex-basis: 40%;
+}
+
+.item-2 {
+  flex-basis: 35%;
+}
+
+.image-2 {
+  flex-basis: 60%;
+}
+
+.item-1 h1,
+.image-2 h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+
+.item-1 p,
+.image-2 p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.item-1 .btn-hero,
+.image-2 .btn-hero {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-left: 40px;
+}
+
+.btn-hero:hover {
+  background-color: #A0D3A7;
+}
+
+.image-1,
+.item-2 {
+  flex-basis: 35%; /* Increase the flex-basis value to allocate more space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.image-1 img,
+.item-2 img {
+  max-width: 100%; /* Increase the max-width value to make the image bigger */
+  max-height: 100%; /* Increase the max-height value to make the image bigger */
+  object-fit: contain;
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  margin-left: 35px; /* Adjust the margin as needed */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px; /* Add margin-bottom to create a gap between sections */
+  align-items: center; /* Add align-items to vertically center the items */
+}
+
+
+
+
+/*------------------------------------------------------- Facts section --------------------------------------------*/
+
+.facts {
+  text-align: center;
+  padding: 20px;
+}
+
+.facts-heading {
+  color: #00590f;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.facts-column {
+  flex: 1;
+  max-width: 300px;
+}
+
+/* Styling for the box */
+.box {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-title {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+/*----------------------------------------------------- Save the turtles section ----------------------------------------------------*/
+.cause-section {
+  background-color: #f2f2f2;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cause-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cause-item {
+  flex-basis: 50%;
+}
+
+.cause-item h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+
+.cause-item p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.cause-item .cause-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-left: 40px;
+}
+
+.cause-btn:hover {
+  background-color: #A0D3A7;
+}
+
+.cause-item img {
+  width: 70%;
+  height: auto;
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  margin-left: 60px; /* Adjust the margin as needed */
+  margin-right: auto;
+}
+
+
+/*---------------------------------------------- Footer styles -----------------------------------------------------------*/
+footer {
+  background-color: #309849; 
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .about-us,
+footer .quick-links,
+footer .contact-us {
+  flex-basis: calc(100% / 3);
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #4fcb62;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer .footer-image {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer .footer-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer .copyright {
+  font-size: 12px;
+  margin-top: 20px; 
+  position: relative;
+}
+
+footer .copyright::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+
+

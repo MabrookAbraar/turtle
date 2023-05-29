@@ -1,0 +1,306 @@
+/*-------------------------------------------------- Global styles -----------------------------------------------*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  background-image: url('Images/cover\ image\ 3.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* ---------------------------------------------------Header Section --------------------------------------------------*/
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.header-logo .logo-img {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #00590f;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative; /* Add relative positioning */
+}
+
+nav ul li a:hover {
+  /* Add animation to the underline */
+  text-decoration: none;
+}
+
+nav ul li a:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  background-color: #00590f;
+  animation-name: underline;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes underline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Dropdown menu styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropbtn {
+  background-color: inherit;
+  color: #00590f;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #35a333;
+  min-width: 160px;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content li {
+  padding: 5px 0;
+}
+
+.dropdown-content li a {
+  color: #ffffff;
+  font-size: 16px;
+  display: block;
+  text-align: center; /* Center the wordings */
+}
+
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  
+  /* ------------------------------------------------Content section---------------------------------------- */
+  .heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .subheading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+ 
+  .types-of-turtle {
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .types-of-turtle h1 {
+    font-size: 32px;
+    color: #333;
+    margin-top: 0;
+  }
+  
+  .types-of-turtle h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+
+/* ------------------------------------------Types of turtle Section------------------------------------------ */
+.types-of-turtle {
+  padding: 50px;
+}
+
+.types-of-turtle h1 {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.turtle-col {
+  flex: 1 1 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.turtle-col h3 {
+  margin-top: 10px;
+}
+
+.turtle-col p {
+  margin-top: 10px;
+}
+
+.turtle-col img {
+  width: 200px;
+  height: 200px;
+}
+/* ---------------------------------------------------Turtle Facts Section------------------------------------------------- */
+.turtle-facts {
+  padding: 50px;
+  text-align: center;
+}
+
+.turtle-facts h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+th {
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  background-color: #309849;
+  color: #fff;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eaf2f0;
+}
+
+tbody tr:hover,
+tbody tr:last-child:hover {
+  background-color: #c5e6d9;
+}
+
+
+/* ----------------------------------------------------------Footer styles -------------------------------------------------------*/
+footer {
+  background-color: #309849; 
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .about-us,
+footer .quick-links,
+footer .contact-us {
+  flex-basis: calc(100% / 3);
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #4fcb62;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer .copyright {
+  font-size: 12px;
+  margin-top: 20px; 
+  position: relative;
+}
+
+footer .copyright::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
