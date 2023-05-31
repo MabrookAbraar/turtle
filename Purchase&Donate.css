@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
-  background-image: url('Images/cover-image\ .png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -127,22 +126,31 @@ nav ul li a:hover::before {
 }
   
   /* Content section */
-  .purchase {
-    padding: 20px;
-    justify-content: center;
+  .purchase,
+.donate-us {
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px; /* Add margin-top for spacing */
+  margin-bottom: 20px; /* Add margin-bottom for spacing */
+}
+  
+  .heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: #313131;
     text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
-  .purchase h1 {
-    font-size: 32px;
-    color: #333;
-    margin-top: 0;
-  }
-  
-  .purchase h2 {
-    font-size: 24px;
-    color: #333;
+  .subheading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #313131;
     text-align: center;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
 /* Purchase section */
@@ -280,6 +288,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 20px; /* Add margin-top for spacing */
 }
 
 footer .about-us,
@@ -334,4 +343,44 @@ footer .copyright::before {
   width: 100%;
   height: 1px;
   background-color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+
+  body{
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-logo {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  nav ul li {
+    padding: 5px;
+  }
+
+  footer{
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }

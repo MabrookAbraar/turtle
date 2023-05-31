@@ -10,8 +10,6 @@ body {
   background-size: cover;
 }
 
-
-
 /* ----------------------------------------------------------Header section------------------------------------------------------ */
 header {
   background-color: #ffffff;
@@ -308,7 +306,7 @@ nav ul li a:hover::before {
 }
 
 .facts-heading {
-  color: #00590f;
+  color: #ffffff;
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -412,6 +410,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -478,5 +477,78 @@ footer .copyright::before {
   height: 1px;
   background-color: #fff;
 }
+@media only screen and (max-width: 767px) {
+  body{
+    width: 100%;
+  }
 
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-logo {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  nav ul li {
+    padding: 5px;
+  }
+
+
+  .item-1 {
+    flex-basis: 100%;
+  }
+  
+  .image-1 {
+    flex-basis: 100%;
+  }
+  
+  .item-2 {
+    flex-basis: 100%;
+  }
+  
+  .image-2 {
+    flex-basis: 100%;
+  }
+
+  .cause-section {
+    padding: 0px;
+  }
+
+  .cause-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-basis: 100%;
+  }
+
+  .cause-item img {
+    width: 90%;
+    height: auto;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    margin-left: 25px/* Adjust the margin as needed */
+  }
+  
+  footer{
+    flex-direction: column;
+    row-gap: 20px;
+  }
+ 
+}
 

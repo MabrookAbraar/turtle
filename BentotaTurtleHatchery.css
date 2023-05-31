@@ -136,13 +136,24 @@ nav ul li a:hover::before {
   padding: 20px;
 }
 
-.container h1 {
+.heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: #313131;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px #00000080;
   margin: 0;
-  margin-bottom: -50px;
 }
 
-.container h2 {
+.subheading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #313131;
+  text-align: center;
   margin: 0;
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /*-------------------------------------------------About Section----------------------------------------------------- */
@@ -214,45 +225,44 @@ nav ul li a:hover::before {
 /*------------------------------------------------- Gallery Section ----------------------------------------------------- */
 
 .gallery-container {
-  text-align: center;
+text-align: center;
 }
 
 .gallery-box {
-  border: 4px solid green;
-  border-radius: 15px;
-  padding: 15px;
-  display: inline-block;
-  max-width: 80%;
-  width: 100%;
+border: 4px solid green;
+border-radius: 15px;
+padding: 15px;
+display: inline-block;
+max-width: 80%;
+width: 100%;
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 10px;
 }
 
 .gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+position: relative;
+z-index: 0;
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
-  z-index: 1;
+transform: rotate(360deg);
+z-index: 1;
 }
 
 .image-large {
-  grid-column: span 2;
-  height: 100%;
+grid-column: span 2;
+height: 100%;
 }
-
 
 
 /*------------------------------------------------- Footer styles----------------------------------------------------- */
@@ -319,4 +329,44 @@ footer .copyright::before {
   width: 100%;
   height: 1px;
   background-color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+
+  body{
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-logo {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  nav ul li {
+    padding: 5px;
+  }
+
+  footer{
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }

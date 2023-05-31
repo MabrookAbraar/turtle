@@ -126,87 +126,99 @@ body {
     display: block;
   }
   
-  /* ----------------------------------Content section------------------------------------------- */
+/* ----------------------------------Content section------------------------------------------- */
 
-  .turtle-hatchery {
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .heading {
-    font-size: 40px;
-    font-weight: bold;
-    color: #e7e7e7;
-    text-align: center;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px #00000080;
-  }
-  
-  .subheading {
-    font-size: 20px;
-    font-weight: bold;
-    color: #e7e7e7;
-    text-align: center;
-    margin-top: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  .main-content {
-    margin-top: 10px; /* Adjust the margin-top value as per your preference */
-    text-align: center;
-  }
-  
-  .description {
-    font-size: 16px;
-    line-height: 1.3;
-    margin-bottom: 5px; /* Adjust the margin-bottom value as per your preference */
-    text-align: center;
-    color: #555;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .description::first-letter {
-    font-size: inherit;
-    font-weight: normal;
-  }
-  
-  
-  
-  /* ----------------------------------------------------Tips section ----------------------------------------------*/
-  .tips-section {
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 40px;
-    text-align: center;
-    margin-top: 40px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px; /* Add margin-bottom to increase spacing */
-  }
-  
-  .tips-section h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 5px;
-    margin-top: 0; /* Updated to remove the default margin */
-  }
-  
-  .tips-section h4 {
-    color: #666;
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    margin-top: 0; /* Updated to remove the default margin */
-  }
+.turtle-hatchery {
+  padding: 40px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: #313131;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px #00000080;
+}
+
+.subheading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #313131;
+  text-align: center;
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-content {
+  margin-top: 10px; /* Adjust the margin-top value as per your preference */
+  text-align: center;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 5px; /* Adjust the margin-bottom value as per your preference */
+  text-align: center;
+  color: #555;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description::first-letter {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+/* ------------------------------------Images section----------------------------------------- */
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Add margin-bottom to increase spacing */
+}
+
+.image-section img {
+  width: 300px; /* Adjust the width as per your preference */
+  margin: 0 10px; /* Adjust the margin as per your preference */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+/* ----------------------------------------------------Tips section ----------------------------------------------*/
+.tips-section {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px; /* Add margin-bottom to increase spacing */
+}
+
+.tips-section h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 5px;
+  margin-top: 0; /* Updated to remove the default margin */
+}
+
+.tips-section h4 {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  margin-top: 0; /* Updated to remove the default margin */
+}
 
 .tips-section ul {
   list-style: none;
@@ -226,6 +238,7 @@ body {
   width: 1em;
   margin-left: -1em;
 }
+
   /* -----------------------------------------------------Maps section--------------------------------------------- */
 
   .location {
@@ -310,4 +323,45 @@ footer .copyright::before {
   width: 100%;
   height: 1px;
   background-color: #fff;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  body{
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-logo {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  nav ul li {
+    padding: 5px;
+  }
+
+  footer{
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }
