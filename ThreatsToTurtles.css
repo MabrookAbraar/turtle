@@ -655,6 +655,7 @@ footer .copyright::before {
 
   .image-container {
     overflow-x: auto;
+    justify-content: left;
   }
 
   footer{

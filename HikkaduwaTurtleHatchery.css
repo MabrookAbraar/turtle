@@ -367,5 +367,6 @@ footer .copyright::before {
 
   .image-section {
     overflow-x: auto;
+    justify-content: left;
   }
 }
