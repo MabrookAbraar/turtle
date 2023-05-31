@@ -369,4 +369,8 @@ footer .copyright::before {
     flex-direction: column;
     row-gap: 20px;
   }
+
+  .image-section {
+    flex: none;
+  }
 }

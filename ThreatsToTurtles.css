@@ -621,14 +621,40 @@ footer .copyright::before {
   }
 
   #habitat-destruction-section .new-image-class {
-    width: 100%;
+    width: 150%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 35px; 
     display: block;
-    margin-left: auto;
+    margin-left: -35px;
     margin-right: auto;
     border: 2px solid #28a745; /* Add a border property with a green color */
+  }
+
+  #pollution-section .new-image-class {
+    width: 150%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 35px; 
+    display: block;
+    margin-left: -35px;
+    margin-right: auto;
+    border: 2px solid #28a745; /* Add a border property with a green color */
+  }
+
+  #illegal-trade-section .new-image-class {
+    width: 150%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 35px; 
+    display: block;
+    margin-left: -35px;
+    margin-right: auto;
+    border: 2px solid #28a745; /* Add a border property with a green color */
+  }
+
+  .image-container {
+    overflow-x: auto;
   }
 
   footer{

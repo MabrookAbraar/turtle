@@ -159,7 +159,7 @@ nav ul li a:hover::before {
 /*-------------------------------------------------About Section----------------------------------------------------- */
 
 .green-box {
-  background-color: green;
+  background-color: rgb(13, 192, 13);
   padding: 20px;
   border-radius: 10px;
   width: 100%;
