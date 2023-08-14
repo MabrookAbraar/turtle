@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <link rel="stylesheet" href="Bookings.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Page</title>
+</head>
+<body>
+    <h1>
+        Buy Tickets
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Bookings.html">Bookings</a></li>
+            <li><a href="Details.html">Details</a></li>
+            <li><a href="Payment.html">Payments</a></li>
+            <li><a href="Confirmation.html">Comfirmation</a></li>
+        </ul>
+    </nav>
+    <form id="form">
+        <fieldset>
+            <h2>Reservation Dates</h2>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" >
+
+            <h2>Guests</h2>
+            <div class="SLADULT">
+                <label for ="sladult">SL Adults:</label>
+                <button id="increase" type="button">+</button>
+                <input type="number" id="sladult" name="number" value="0" size="2" max="50" step="1" readonly>
+                <button id="decrease" type="button">-</button>
+            </div>
+            <div class="SLCHILD">
+                <label for ="slchild">SL Children:</label>
+                <button id="increase1" type="button">+</button>
+                <input type="number" id="slchild" name="number" value="0" size="2" max="50" step="1" readonly>
+                <button type="button" id="decrease1">-</button>
+            </div>
+            <div class="FOREIGNADULT">
+                <label for ="foreignadult">Foreigner Adults:</label>
+                <button id="increase2" type="button">+</button>
+                <input type="number" id="foreignadult" name="number" value="0" size="2" max="50" step="1" readonly>
+                <button type="button" id="decrease2">-</button>
+            </div>
+            <div class="FOREIGNCHILD">
+                <label for ="foreignchild">Foreigner Children:</label>
+                <button id="increase3" type="button">+</button>
+                <input type="number" id="foreignchild" name="number" value="0" size="2" max="50" step="1" readonly>
+                <button type="button" id="decrease3">-</button>
+            </div>
+            <div class="INFANT">
+                <label for ="infant" >Infants:</label>
+                <button id="increase4" type="button">+</button>
+                <input type="number" id="infant" name="number" value="0" size="2" max="50" step="1" readonly>
+                <button type="button" id="decrease4">-</button>
+            </div>
+            
+            <h2>Duration</h2>
+            <div class="duration">
+                <label for="duration">Duration:</label>
+                <select name="duration" id="duration" required>
+                    <option value = "" selected disabled>Choose time here</option>
+                    <option value="slot1">07.00am to 08.00am</option>
+                    <option value="slot2">08.00am to 09.00am</option>
+                    <option value="slot3">09.00am to 10.00am(Peak)</option>
+                    <option value="slot4">10.00am to 11.00am(Peak)</option>
+                    <option value="slot5">11.00am to 12.00pm(Peak)</option>
+                    <option value="slot6">12.00pm to 01.00pm(Peak)</option>
+                    <option value="slot7">01.00pm to 02.00pm</option>
+                    <option value="slot8">02.00pm to 03.00pm</option>
+                    <option value="slot9">03.00pm to 04.00pm(Peak)</option>
+                    <option value="slot10">04.00pm to 05.00pm(Peak)</option>
+                    <option value="slot11">05.00pm to 06.00pm(Peak)</option>
+                </select>
+            </div>
+            <a href="Details.html"><button type="button"  id="next" disabled >Continue with purchase</button></a>
+        </fieldset>
+    </form>
+    
+    <table border="1" id="summarytable">
+        <tr>
+            <th>Date</th>
+            <td><div id="currdate"></div> </td>
+        </tr>
+        <tr>
+            <th>Time</th>
+            <td>
+                <div id="t1">
+                    <div id="s1"></div>
+                    <div id="s2"></div>
+                    <div id="s3"></div>
+                    <div id="s4"></div>
+                    <div id="s5"></div>
+                    <div id="s6"></div>
+                    <div id="s7"></div>
+                    <div id="s8"></div>
+                    <div id="s9"></div>
+                    <div id="s10"></div>
+                    <div id="s11"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>Duration</th>
+            <td>
+                <div id ="t2">
+                    <div id="d1"></div>
+                    <div id="d2"></div>
+                </div>
+            </td>
+        </tr>
+        <tr class="Guest">
+            <th>Tickets</th>
+            <th>Charges</th>
+        </tr>
+        <tr>
+            <th>SL Adults</th>
+            <td><div id="sladult1"></div></td>
+        </tr>
+        <tr>
+            <th>SL Children</th>
+            <td><div id="slchild1"></div></td>
+        </tr>
+        <tr>
+            <th>Foreigner Adults</th>
+            <td><div id="foreignadult1"></div></td>
+        </tr>
+        <tr>
+            <th>Foreigner Children</th>
+            <td><div id="foreignchild1"></div></td>
+        </tr>
+        <tr>
+            <th>Infants</th>
+            <td><div id="infant1"></div></td>
+        </tr>
+        <tr class="Total Payable">
+            <th>Total Payable</th>
+            <td><div id="total"></div></td>
+        </tr>
+    </table>
+    <table border="1" id="pricetable">
+        <tr>
+            <th>Guests</th>
+            <th>Peak Hour</th>
+            <th>Normal Hour</th>
+        </tr>
+        <tr>
+            <th>SL Adults</th>
+            <td>6 USD</td>
+            <td>4 USD</td>
+        </tr>
+        <tr>
+            <th>SL Children</th>
+            <td>3 USD</td>
+            <td>2 USD</td>
+        </tr>
+        <tr>
+            <th>Foreigner Adults</th>
+            <td>13 USD</td>
+            <td>10 USD</td>
+        </tr>
+        <tr>
+            <th>Foreigner Children</th>
+            <td>8 USD</td>
+            <td>5 USD</td>
+        </tr>
+        <tr>
+            <th>Infants(UNDER 4)</th>
+            <td>Free</td>
+            <td>Free</td>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

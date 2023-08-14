@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Bookings.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <h1>Buy Tickets</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Bookings.html">Bookings</a></li>
+            <li><a href="Details.html">Details</a></li>
+            <li><a href="Payment.html">Payments</a></li>
+            <li><a href="Confirmation.html">Comfirmation</a></li>
+        </ul>
+    </nav>
+<form id="form">
+    <fieldset>
+        <h2>Enter Your Details</h2>
+        <div class="NAME">
+            <label for="name">Full Name</label>
+            <p>Same as on your ID</p>
+            <input type="text" name="name" id="name" placeholder="Full Name" required>
+            <div id="NAMEerror">Please add your full name</div>
+        </div> 
+        <div class="NUMBER">
+            <label for="number">Phone Number</label>
+            <p>We may reach out for booking updates</p>
+            <select id="CountryCode" required>
+                <option value="" selected disabled>Country Code</option>
+                <option value="+1">USA (+1)</option>
+                <option value="+91">India(+91)</option>
+                <option value="+44">UK(+44)</option>
+                <option value="+971">UAE(+971)</option>
+                <option value="+65">Singapore(+65)</option>
+                <option value="+60">Malaysia(+60)</option>
+                <option value="+94" >Sri Lanka(+94)</option>
+                <option value="+61">Australia(+61)</option>
+                <option value="+64">New Zealand(+64)</option>
+                <option value="+977">Nepal(+977)</option>
+            </select>
+            <input type="tel" name="number" id="number" placeholder="Phone Number" size="15" maxlength="15" required>
+            <div id="NUMBERerror">Add a valid phone number</div>
+        </div>
+        <div id="EMAIL">
+            <label for="email">Email</label>
+            <p>We will send your tickets here</p>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <div id="EMAILerror">Add a valid email</div>
+        </div>
+        <div id="CONFIRMEMAIL">
+            <label for="confirmemail">Confirm Email</label>
+            <p>Just to Ensure we've got this right</p>
+            <input type="email" name="confirmemail" id="confirmemail" placeholder="Confirm Email" required>
+            <div id="CONFIRMEMAILerror">Emails do not match</div>
+        </div>
+        <div id="GENDER">
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>
+        <a href="Payment.html"><button type="button" id="next" disabled>Continue with purchase</button></a>
+
+    </fieldset>
+</form>
+<table border="1" id="summarytable">
+    <tr>
+        <th>Date</th>
+        <td><div id="detail1"></div></td>
+    </tr>
+    <tr>
+        <th>Time</th>
+        <td><div id="detail2"></div></td>
+    </tr>
+    <tr>
+        <th>Duration</th>
+        <td><div id="detail3"></div></td>
+    </tr>
+    <tr class="Guest">
+        <th>Tickets</th>
+        <th>Charges</th>
+    </tr>
+    <tr>
+        <th>SL Adult</th>
+        <td><div id="detail4"></div></td>
+    </tr>
+    <tr>
+        <th>SL Child</th>
+        <td><div id="detail5"></div></td>
+    </tr>
+    <tr>
+        <th>Foreigner Adults</th>
+        <td><div id="detail6"></div></td>
+    </tr>
+    <tr>
+        <th>Foreigner Child</th>
+        <td><div id="detail7"></div></td>
+    </tr>
+    <tr>
+        <th>Infants</th>
+        <td><div id="detail8"></div></td>
+    </tr>
+    <tr class="Total Payable">
+        <th>Total Payable</th>
+        <td><div id="detail9"></div></td>
+    </tr>
+</table>
+<script src="Details.js"></script>
+</body>

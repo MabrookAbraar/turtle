@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="Bookings.css">
+</head>
+<body>
+    <h1>
+        Buy Tickets
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Bookings.html">Bookings</a></li>
+            <li><a href="Details.html">Details</a></li>
+            <li><a href="Payment.html">Payments</a></li>
+            <li><a href="Confirmation.html">Comfirmation</a></li>
+        </ul>
+    </nav>
+    <form id="form">
+    <fieldset>
+        <h2>Payment Details</h2>
+        <div id="CARDNUMBER">
+            <label for="cardnumber">Card Number</label><br>
+            <input type="number" id="cardnumber" name="cardnumber" placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="16" pattern="[0-9]{13,19}" required><br>
+            <div id="cardnumbererror">Incomplete field</div>
+        </div>
+        <div id="EXPIRY">
+            <label for="expdate">Expiration Date</label><br>
+            <input type="month" id="expdate" name="expdate" required><br>
+            <div id="expirydateerror">Incomplete field</div>
+        </div>
+        <div id="CVV">
+            <label for="cvv">CVV</label><br>
+            <input type="number" id="cvv" name="cvv" placeholder="xxx" maxlength="3" pattern="[0-9]{3}" required><br>
+            <div id="cvverror">Incomplete field</div>
+        </div>
+        <div id="CARDNAME">
+            <label for="cardname">Name on Card</label><br>
+            <input type="text" id="cardname" name="cardname" placeholder="Name on Card" required><br>
+            <div id="cardnameerror">Incomplete field</div>
+        </div>
+        <a href="Confirmation.html"><button type="button" id="pay" disabled>Pay</button></a>
+    </fieldset>
+    </form>
+    <table border="1" id="summarytable">
+        <tr>
+            <th>Name</th>
+            <td><div id="s1"></div></td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td><div id="s2"></div></td>
+        </tr>
+        <tr>
+            <th>Time</th>
+            <td><div id="s3"></div></td>
+        </tr>
+        <tr>
+            <th>Duration</th>
+            <td><div id="s4"></div></td>
+        </tr>
+        <tr>
+            <th>Mobile</th>
+            <td><div id="s5"></div></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><div id="s6"></div></td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td><div id="s7"></div></td>
+        </tr>
+        <tr class="Guest">
+            <th>Tickets</th>
+            <th>Charges</th>
+        </tr>
+        <tr>
+            <th>SL Adult</th>
+            <td><div id="s8"></div></td>
+        </tr>
+        <tr>
+            <th>SL Child</th>
+            <td><div id="s9"></div></td>
+        </tr>
+        <tr>
+            <th>Foreigner Adults</th>
+            <td><div id="s10"></div></td>
+        </tr>
+        <tr>
+            <th>Foreigner Child</th>
+            <td><div id="s11"></div></td>
+            
+        </tr>
+        <tr>
+            <th>Infants</th>
+            <td><div id="s12"></div></td>
+        </tr>
+        <tr class="Total Payable">
+            <th>Total Payable</th>
+            <td><div id="s13"></div></td>
+        </tr>   
+    </table>
+    <script src="Payment.js"></script>
+</body>
+</html>

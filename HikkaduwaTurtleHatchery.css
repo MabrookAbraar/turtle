@@ -172,6 +172,7 @@ body {
   font-weight: normal;
 }
 
+
 /* ------------------------------------Images section----------------------------------------- */
 .image-section {
   display: flex;
@@ -258,6 +259,29 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
+  /* -------------------------- Book Now Button -------------------------- */
+.book-now-btn {
+  display: inline-block;
+  padding: 15px 30px; /* Increase padding to make the button bigger */
+  background-color: #00b266; /* Use a more interesting green color */
+  color: #fff;
+  font-size: 18px; /* Increase font size to make the button text bigger */
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 40px auto; /* Center align the button using margin */
+  display: block; /* Change display to block to center align */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for a smooth effect */
+  width: fit-content; /* Adjust the width to fit the button text */
+  /* Add box-shadow to create a 3D effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.book-now-btn:hover {
+  background-color: #00994d; /* Change the hover color to a darker green */
+  /* Add transform property to create a pressing effect */
+  transform: translateY(2px);
+}
+
   
 /* ----------------------------------------------------------Footer styles -------------------------------------------------------*/
 footer {
